@@ -1,5 +1,7 @@
 package com.coolweather.app.model;
 
+import android.util.Log;
+
 public class City {
 	private int id;
 	private String cityName;

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	
@@ -28,6 +29,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
 		// TODO 自动生成的构造函数存根
+		
 	}
 
 	@Override
@@ -36,7 +38,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 		db.execSQL(CREATE_PROVINCE);
 		db.execSQL(CREATE_COUNTY);
 		db.execSQL(CREATE_CITY);
-	}
+		}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
